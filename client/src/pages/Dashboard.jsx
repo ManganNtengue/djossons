@@ -97,7 +97,7 @@ const Dashboard = () => {
                             </TinderCard>
                         )}
                         <div className="swipe-info">
-                            {lastDirection ? <p>You swiped {lastDirection}</p> : <p/>}
+                            {lastDirection ? <p> Balayé {lastDirection}</p> : <p/>}
                         </div>
                     </div>
                 </div>

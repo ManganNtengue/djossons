@@ -16,6 +16,7 @@ const Home =() =>{
     const authToken = cookies.AuthToken
 
     //const authToken = false
+    //⇢
 
     const handleClick = () => {
         if (authToken) {
@@ -35,9 +36,10 @@ const Home =() =>{
                 setShowModal={setShowModal}
                 showModal={showModal}
                 setIsSignUp={setIsSignUp} 
+
              />
             <div className="home">
-                <h1 className="primary-title">Balayer à Droite ⇢</h1>
+                <h1 className="primary-title">Djossons</h1>
                 <button className="primary-button" onClick={handleClick}> 
                     {authToken? "Déconnexion": "S'inscrire"}
                 </button>

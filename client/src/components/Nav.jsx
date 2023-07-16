@@ -25,7 +25,7 @@ const Nav =({minimal, authToken, setShowModal, showModal, setIsSignUp}) =>{
             <div className="logo-container">
                 <img
                 className="logo"
-                src={minimal ? pinklogo : bluelogo}
+                src={minimal ? bluelogo:pinklogo }
                 alt="logo"
                 />
             </div>
