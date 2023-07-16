@@ -5,16 +5,25 @@ import{useState} from "react"
 
 import AuthModal from "../components/AuthModal"
 
+import {useCookies} from "react-cookie"
+
 
 const Home =() =>{
 
     const [showModal, setShowModal] = useState(false)
     const [isSignUp, setIsSignUp] = useState(true)
+    const [cookies, setCookie, removeCookie] = useCookies(['user'])
+    const authToken = cookies.AuthToken
 
-    const authToken = false
+    //const authToken = false
 
     const handleClick = () => {
-        console.log('clicked')
+        if (authToken) {
+            removeCookie('UserId', cookies.UserId)
+            removeCookie('AuthToken', cookies.AuthToken)
+            window.location.reload()
+            return
+        }
         setShowModal(true)
         setIsSignUp(true)
     }
