@@ -1,8 +1,43 @@
 
+import Nav from "../components/Nav"
+
+import{useState} from "react"
+
+import AuthModal from "../components/AuthModal"
+
+
 const Home =() =>{
+
+    const [showModal, setShowModal] = useState(false)
+    const [isSignUp, setIsSignUp] = useState(true)
+
+    const authToken = false
+
+    const handleClick = () => {
+        console.log('clicked')
+        setShowModal(true)
+        setIsSignUp(true)
+    }
+
     return(
-        <div>
-            <h1>Home</h1>
+        <div className="overlay">
+            <Nav minimal={false} 
+                authToken={authToken} 
+                setShowModal={setShowModal}
+                showModal={showModal}
+                setIsSignUp={setIsSignUp} 
+             />
+            <div className="home">
+                <h1 className="primary-title">Balayer à Droite ⇢</h1>
+                <button className="primary-button" onClick={handleClick}> 
+                    {authToken? "Déconnexion": "S'inscrire"}
+                </button>
+                {
+                    showModal &&(
+                        <AuthModal setShowModal={setShowModal}  isSignUp={isSignUp} />
+                    )
+                }
+            </div>
         </div>
     )
 }
