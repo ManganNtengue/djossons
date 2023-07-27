@@ -99,6 +99,7 @@ const Dashboard = () => {
                         <div className="swipe-info">
                             {lastDirection ? <p> Balayé {lastDirection}</p> : <p/>}
                         </div>
+                        
                     </div>
                 </div>
             </div>}

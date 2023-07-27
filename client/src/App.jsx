@@ -18,6 +18,8 @@ const App=()=> {
           <Route path='/' element={<Home/>}/>
           {authToken && <Route path='/dashboard' element={<Dashboard/>}/>}
           {authToken && <Route path='/onboarding' element={<Onboarding/>}/>}
+          {/* <Route path='/onboarding' element={<Onboarding/>}/>
+          <Route path='/dashboard' element={<Dashboard/>}/>  */} 
         </Routes>
       </BrowserRouter>
     </>

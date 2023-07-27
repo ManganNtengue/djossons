@@ -26,6 +26,8 @@ const AuthModal =({setShowModal, isSignUp}) =>{
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        console.log('handleSubmit called');
+
         try {
             if(isSignUp && (password!== confirmPassword)) {
                 setError("Les mots de passe ne correspondent pas");

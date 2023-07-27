@@ -7,7 +7,9 @@ const cors = require('cors')
 const bcrypt = require('bcrypt')
 require('dotenv').config()
 
-const uri = process.env.URI
+//const uri = process.env.URI
+
+const uri = 'mongodb+srv://mangan:Venusvenus3.@cluster0.vmwshsl.mongodb.net/Cluster0?retryWrites=true&w=majority'
 
 const app = express()
 app.use(cors())
@@ -54,6 +56,7 @@ app.post('/signup', async (req, res) => {
 
     } catch (err) {
         console.log(err)
+        res.status(500).json("Internal Server Error");
     } finally {
         await client.close()
     }

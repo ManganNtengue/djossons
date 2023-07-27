@@ -19,7 +19,7 @@ const ChatContainer = ({ user }) => {
 
             {clickedUser && <ChatDisplay user={user} clickedUser={clickedUser}/>}
         </div>
-    )
+     )
 }
 
 export default ChatContainer
