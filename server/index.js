@@ -9,7 +9,7 @@ require('dotenv').config()
 
 //const uri = process.env.URI
 
-const uri = 'mongodb+srv://mangan:Venusvenus3.@cluster0.vmwshsl.mongodb.net/Cluster0?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://mangan:...@cluster0.vmwshsl.mongodb.net/...?retryWrites=true&w=majority'
 
 const app = express()
 app.use(cors())
